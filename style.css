@@ -2650,7 +2650,7 @@ body.dark-theme .solution-horizontal-card:hover {
 /* About Page Premium Redesigned Styles */
 .story-split-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
   margin-top: 48px;
@@ -2664,7 +2664,7 @@ body.dark-theme .solution-horizontal-card:hover {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 48px;
   box-shadow: 0 8px 32px rgba(0, 136, 255, 0.03);
   border-top: 3px solid var(--accent-orange);
 }
@@ -2678,10 +2678,10 @@ body.dark-theme .founders-widget-card {
 }
 
 .founders-widget-title {
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   font-weight: 600;
   color: var(--text-main);
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .founders-list {
@@ -2694,10 +2694,10 @@ body.dark-theme .founders-widget-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 20px 24px;
+  padding: 24px 28px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   transition: all 0.25s ease;
 }
 
@@ -2716,8 +2716,8 @@ body.dark-theme .founders-widget-card {
 
 .avatar-ring-wrapper {
   position: relative;
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   padding: 4px;
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.15) 0%, rgba(0, 180, 255, 0.02) 100%);
@@ -2730,6 +2730,8 @@ body.dark-theme .founders-widget-card {
 }
 
 .founder-row-item .avatar-ring-wrapper {
+  width: 108px;
+  height: 108px;
   margin-bottom: 0;
   flex-shrink: 0;
 }
@@ -2765,21 +2767,21 @@ body.dark-theme .founders-widget-card {
 }
 
 .founder-name {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-main);
 }
 
 .founder-role {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--accent-orange);
   text-transform: uppercase;
-  margin: 4px 0 8px 0;
+  margin: 6px 0 10px 0;
 }
 
 .founder-desc-meta {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.35;
 }
@@ -3127,8 +3129,8 @@ body.dark-theme .premium-team-card:hover {
   }
 
   .founder-row-item .avatar-ring-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 72px;
   }
 
   .map-container {
@@ -3409,21 +3411,25 @@ body.dark-theme .map-container iframe {
 }
 
 .loader-logo-img {
-  width: 180px;
+  width: 240px;
   height: auto;
   animation: loader-logo-pulse 4.0s ease-in-out infinite;
   user-select: none;
   pointer-events: none;
 }
 
+body.dark-theme .loader-logo-img {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.1);
+}
+
 .loader-progress-bar {
-  width: 140px;
+  width: 180px;
   height: 3px;
   background-color: var(--border-color);
   border-radius: 99px;
   overflow: hidden;
   position: relative;
-  margin-top: -35px;
+  margin-top: -45px;
 }
 
 .loader-progress-line {
