@@ -3328,7 +3328,6 @@ textarea.form-control {
 }
 
 .form-notification.success {
-  display: flex;
   background: var(--accent-green-bg);
   border: 1px solid rgba(16, 185, 129, 0.2);
   color: var(--accent-green);

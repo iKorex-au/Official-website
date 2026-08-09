@@ -41,7 +41,7 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="active">Contact</a>
         <div class="mobile-cta">
-          <a href="index.html#get-started" class="btn btn-primary btn-sm">Start Trial</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">Start Trial</a>
         </div>
       </nav>
       
@@ -63,7 +63,7 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <a href="index.html#get-started" class="btn btn-primary btn-sm">Start Trial</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start Trial</a>
       </div>
       
       <!-- Mobile menu trigger -->
@@ -174,28 +174,28 @@
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="fullName">Full Name</label>
-                <input type="text" id="fullName" class="form-control" placeholder="John Doe" required>
+                <input type="text" id="fullName" name="name" class="form-control" placeholder="John Doe" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="companyName">Company Name</label>
-                <input type="text" id="companyName" class="form-control" placeholder="Acme Corp" required>
+                <input type="text" id="companyName" name="company" class="form-control" placeholder="Acme Corp" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="email">Business Email</label>
-                <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="phone">Phone Number</label>
-                <input type="text" id="phone" class="form-control" placeholder="0400 000 000" required>
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="0400 000 000" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="inquiryType">What would you like to automate?</label>
-              <select id="inquiryType" class="form-control" required>
+              <select id="inquiryType" name="inquiryType" class="form-control" required>
                 <option value="" disabled selected>Select an option...</option>
                 <option value="rpa">RPA & Workflow Automation</option>
                 <option value="ai-security">AI Video Security Monitoring</option>
@@ -207,7 +207,7 @@
 
             <div class="form-group">
               <label class="form-label" for="message">How can we help you?</label>
-              <textarea id="message" class="form-control" placeholder="Tell us about the manual tasks or workflows you would like to automate..." required></textarea>
+              <textarea id="message" name="message" class="form-control" placeholder="Tell us about the manual tasks or workflows you would like to automate..." required></textarea>
             </div>
 
             <div class="submit-btn-container">
@@ -303,15 +303,46 @@
     function handleFormSubmit(event) {
       event.preventDefault();
       
+      const form = event.target;
+      const data = new FormData(form);
+      const submitButton = form.querySelector('button[type="submit"]');
       const successBanner = document.getElementById('formSuccess');
-      if (successBanner) {
-        successBanner.style.display = 'flex';
+      
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
       }
       
-      document.getElementById('contactForm').reset();
-      
-      // Smooth scroll back to success notice
-      successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      fetch('https://formspree.io/f/xoeaeelk', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          if (successBanner) {
+            successBanner.style.display = 'flex';
+            successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+              alert('Oops! There was a problem submitting your form.');
+            }
+          });
+        }
+      }).catch(error => {
+        alert('Oops! There was a problem submitting your form.');
+      }).finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send Message';
+        }
+      });
     }
   </script>
 </body>
