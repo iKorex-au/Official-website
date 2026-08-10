@@ -1,23 +1,75 @@
-// --- Preloader Hide Logic ---
+// --- Preloader Hide Logic (Home Page Only) ---
 (function() {
-  const hidePreloader = () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader && !preloader.classList.contains('fade-out')) {
-      setTimeout(() => {
-        preloader.classList.add('fade-out');
-        setTimeout(() => preloader.remove(), 900);
-      }, 1200); // 1.2s delay to allow user to see the preloader
-    }
-  };
-  
-  if (document.readyState === 'complete') {
-    hidePreloader();
-  } else {
-    window.addEventListener('load', hidePreloader);
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  const progressLine = preloader.querySelector('.loader-progress-line');
+  const progressSteps = [15, 35, 55, 75, 90, 100];
+  let currentStep = 0;
+  let pageLoaded = false;
+  let finishTriggered = false;
+
+  // Set initial progress style
+  if (progressLine) {
+    progressLine.style.animation = 'none';
+    progressLine.style.left = '-100%';
+    progressLine.style.transition = 'left 0.4s cubic-bezier(0.1, 0.8, 0.2, 1)';
   }
-  
-  // Fail-safe: hide preloader after 4 seconds regardless
-  setTimeout(hidePreloader, 4000);
+
+  function triggerFadeOut() {
+    if (finishTriggered) return;
+    finishTriggered = true;
+    
+    // Update to 100% progress
+    if (progressLine) progressLine.style.left = '0%';
+
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+      setTimeout(() => preloader.remove(), 900);
+    }, 400); // 400ms hold time at 100% before fading out
+  }
+
+  function runLoader() {
+    if (currentStep >= progressSteps.length - 1) {
+      // If the page is loaded, finish up. If not, wait for it at 90%
+      if (pageLoaded) {
+        triggerFadeOut();
+      }
+      return;
+    }
+
+    const progress = progressSteps[currentStep];
+    
+    // Update progress line (translate 0-100% to -100% to 0% left value)
+    if (progressLine) {
+      progressLine.style.left = `${-100 + progress}%`;
+    }
+
+    currentStep++;
+
+    // Schedule next step with a slight random variation (200ms to 450ms)
+    const nextDelay = 200 + Math.random() * 250;
+    setTimeout(runLoader, nextDelay);
+  }
+
+  // Set pageLoaded when window load event fires
+  if (document.readyState === 'complete') {
+    pageLoaded = true;
+  } else {
+    window.addEventListener('load', () => {
+      pageLoaded = true;
+      // If we already reached 90% (step index 4), trigger the finish
+      if (currentStep >= progressSteps.length - 1) {
+        triggerFadeOut();
+      }
+    });
+  }
+
+  // Start loader sequence
+  setTimeout(runLoader, 150);
+
+  // Fail-safe: force hide preloader after 4.5 seconds regardless of state
+  setTimeout(triggerFadeOut, 4500);
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
