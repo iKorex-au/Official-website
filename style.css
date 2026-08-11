@@ -529,34 +529,14 @@ body.dark-theme .theme-toggle-btn .moon-icon {
   justify-content: center;
 }
 
-.hero-video-container {
+.hero-animation-container {
   width: 100%;
-  max-width: 540px;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 10px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  max-width: 580px;
   position: relative;
   z-index: 3;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-  overflow: hidden;
-}
-
-.hero-video-container:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: var(--accent-blue);
-  box-shadow: 0 30px 60px rgba(0, 180, 255, 0.15);
-}
-
-.hero-video-element {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: calc(var(--radius-lg) - 8px);
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-outline-wrapper {
@@ -3597,6 +3577,250 @@ body.dark-theme .loader-logo-img {
   to {
     opacity: 0.85;
     transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Hero Interactive Integration Animation
+   ========================================================================== */
+
+.animation-workspace {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animation-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 120px;
+  z-index: 5;
+}
+
+.animation-column.col-left {
+  align-items: flex-start;
+}
+
+.animation-column.col-right {
+  align-items: flex-end;
+}
+
+/* Node item design */
+.node-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 6px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.node-item:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 180, 255, 0.12);
+}
+
+.node-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(0, 180, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.node-name {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+/* Center Node design */
+.node-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.logo-circle-container {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 180, 255, 0.25);
+  z-index: 12;
+  overflow: hidden;
+  padding: 14px;
+  transition: transform 0.4s ease;
+}
+
+.logo-circle-container:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.center-logo-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+/* Dark theme logic for logo image */
+body.dark-theme .center-logo-img {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.1);
+}
+
+.center-label {
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--brand-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Pulsing rings around center logo */
+.center-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-blue);
+  opacity: 0;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.center-pulse-ring.ring-1 {
+  animation: pulse-ring-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.center-pulse-ring.ring-2 {
+  animation: pulse-ring-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s infinite;
+}
+
+@keyframes pulse-ring-expand {
+  0% {
+    width: 96px;
+    height: 96px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 190px;
+    height: 190px;
+    opacity: 0;
+  }
+}
+
+/* SVG connection paths overlay */
+.animation-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.animated-path {
+  stroke: var(--border-color);
+  stroke-width: 1.5px;
+  stroke-dasharray: 4, 4;
+  fill: none;
+}
+
+/* Hover path styling */
+.hero-animation-container:hover .animated-path {
+  stroke: rgba(0, 180, 255, 0.2);
+}
+
+/* Floating animation keyframes */
+.animate-float-slow {
+  animation: float-node 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-node 5s ease-in-out infinite 1s;
+}
+
+.animate-float-fast {
+  animation: float-node 4s ease-in-out infinite 2s;
+}
+
+@keyframes float-node {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive styles for smaller screen widths */
+@media (max-width: 580px) {
+  .animation-workspace {
+    height: auto;
+    flex-direction: column;
+    gap: 35px;
+    padding: 20px 0;
+  }
+  .animation-column {
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .node-item {
+    width: auto;
+    flex: 1;
+    justify-content: center;
+  }
+  .node-center {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 15px 0;
+  }
+  .center-pulse-ring {
+    top: 50% !important;
+  }
+  .animation-svg {
+    display: none; /* Hide SVG connection lines on small screens when stacked */
   }
 }
 
