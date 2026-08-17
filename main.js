@@ -282,9 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const isSolutionsPage = window.location.pathname.includes('solutions.html');
   const isAboutPage = window.location.pathname.includes('about.html');
   const isContactPage = window.location.pathname.includes('contact.html');
+  const isPrivacyPage = window.location.pathname.includes('privacy.html');
 
   function updateActiveLink() {
-    if (isServicesPage || isSolutionsPage || isAboutPage || isContactPage) return;
+    if (isServicesPage || isSolutionsPage || isAboutPage || isContactPage || isPrivacyPage) return;
     
     let currentSectionId = '';
     const scrollPosition = window.scrollY + 150; 

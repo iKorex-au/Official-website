@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | iKOREX Australia</title>
+  <meta name="description"
+    content="Read the iKOREX Privacy & Data Management Policy. Learn how we collect, handle, use, and secure personal and business data across our automated services.">
+
+  <!-- Inter Tight & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased">
+  <script>
+    (function () {
+      try {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.body.classList.add('dark-theme');
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="logo.png" alt="iKOREX Logo">
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="nav-links">
+        <a href="index.html#hero">Home</a>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm">Start Trial</a>
+        </div>
+      </nav>
+
+      <!-- Right CTA & Theme Toggle -->
+      <div class="nav-cta">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start Trial</a>
+      </div>
+
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="privacy-hero"
+    style="padding: 160px 20px 60px 20px; text-align: center; position: relative; overflow: hidden; background: radial-gradient(circle at 50% 10%, rgba(0, 136, 255, 0.04) 0%, transparent 60%); border-bottom: 1px solid var(--border-color);">
+    <div class="grid-overlay"></div>
+    <div class="section-container" style="position: relative; z-index: 2;">
+      <div style="margin-bottom: 24px;">
+        <div class="custom-badge">
+          <span class="badge-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" class="badge-svg">
+              <defs>
+                <linearGradient id="logo-icon-grad-top-privacy" x1="3" y1="3" x2="21" y2="12"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00b4ff" />
+                  <stop offset="100%" stop-color="#0088ff" />
+                </linearGradient>
+                <linearGradient id="logo-icon-grad-bottom-privacy" x1="3" y1="21" x2="21" y2="12"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#0055cc" />
+                  <stop offset="100%" stop-color="#0088ff" />
+                </linearGradient>
+              </defs>
+              <path d="M3 3 L21 12 L8 12 L3 9 Z" fill="url(#logo-icon-grad-top-privacy)" />
+              <path d="M3 21 L21 12 L8 12 L3 15 Z" fill="url(#logo-icon-grad-bottom-privacy)" />
+            </svg>
+          </span>
+          <span class="badge-text">Legal Framework</span>
+        </div>
+      </div>
+      <h1 class="section-title"
+        style="margin: 0 auto 20px auto; font-size: 3.25rem; line-height: 1.15; max-width: 900px;">Privacy &amp; Data
+        Management Policy</h1>
+      <p class="section-subtitle" style="max-width: 680px; margin: 0 auto; font-size: 1.125rem; line-height: 1.6;">
+        Last updated: 13 Jul 2026 &mdash; Effective: 01 Jul 2027
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <main class="section-container privacy-layout">
+    <div class="privacy-grid">
+      <!-- Sticky Navigation Sidebar -->
+      <aside class="privacy-sidebar">
+        <nav class="privacy-nav">
+          <a href="#introduction" class="privacy-nav-link active">1. Introduction</a>
+          <a href="#information-we-collect" class="privacy-nav-link">2. Personal Information Collected</a>
+          <a href="#how-we-collect" class="privacy-nav-link">3. Collection Methods</a>
+          <a href="#why-we-collect" class="privacy-nav-link">4. Purpose of Processing</a>
+          <a href="#cookies" class="privacy-nav-link">5. Cookies &amp; Analytics</a>
+          <a href="#whatsapp" class="privacy-nav-link">6. WhatsApp &amp; Third Parties</a>
+          <a href="#disclosure" class="privacy-nav-link">7. Disclosure &amp; Overseas</a>
+          <a href="#client-processing" class="privacy-nav-link">8. Processed for Clients</a>
+          <a href="#direct-marketing" class="privacy-nav-link">9. Direct Marketing</a>
+          <a href="#data-security" class="privacy-nav-link">10. Data Security</a>
+          <a href="#data-retention" class="privacy-nav-link">11. Data Retention</a>
+          <a href="#access-correction" class="privacy-nav-link">12. Access &amp; Complaints</a>
+          <a href="#contact" class="privacy-nav-link">13. Contact Us</a>
+          <a href="#childrens-privacy" class="privacy-nav-link">14. Children's Privacy</a>
+          <a href="#changes" class="privacy-nav-link">15. Policy Changes</a>
+          <a href="#governing-law" class="privacy-nav-link">16. Governing Law</a>
+        </nav>
+      </aside>
+
+      <!-- Main Document Reading Area -->
+      <article class="privacy-document">
+
+        <!-- Section 1 -->
+        <section id="introduction" class="privacy-section">
+          <h2>1. Introduction</h2>
+          <p>ikorex provides intelligent process automation services to businesses, including robotic process automation
+            (RPA), WhatsApp-based conversational automation, Order-to-Cash and Procure-to-Pay automation, AI computer
+            vision monitoring, and finance and accounting automation ("Services").</p>
+          <p>We are committed to protecting personal information in accordance with the Privacy Act 1988 (Cth) and the
+            Australian Privacy Principles (APPs). This policy explains what personal information we collect, why we
+            collect it, how we use and disclose it, and how you can access, correct, or raise concerns about it.</p>
+          <p>This policy applies to:</p>
+          <ul>
+            <li>visitors to our website;</li>
+            <li>individuals who submit an enquiry or request a scope valuation;</li>
+            <li>contacts at our client and prospective client organisations; and</li>
+            <li>job applicants.</li>
+          </ul>
+          <p>It does not replace the separate data processing terms we enter into with clients that govern personal
+            information we process on a client's behalf through their deployed automation systems (see Section 8).</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="information-we-collect" class="privacy-section">
+          <h2>2. Personal information we collect</h2>
+          <p>Depending on how you interact with us, we may collect:</p>
+          <ul>
+            <li><strong>Contact and identity information:</strong> Name, Job title, Company name, Email address, Phone
+              number.</li>
+            <li><strong>Enquiry details:</strong> the information you provide in our contact/scope valuation form,
+              including your area of interest and a description of your business's operational context.</li>
+            <li><strong>Website usage information:</strong> IP address, browser type, device information, pages visited,
+              and referral source, collected via Google Analytics and cookies (see Section 5).</li>
+            <li><strong>Communications:</strong> records of emails, calls, and messages (including WhatsApp messages,
+              where you contact us via WhatsApp) between you and ikorex.</li>
+            <li><strong>Job applicant information:</strong> if you apply for a role with us, your resume, cover letter,
+              and any information you provide during recruitment.</li>
+          </ul>
+          <p>We do not knowingly collect sensitive information (such as health, biometric, or financial account
+            information) through our website. If sensitive information is ever required for a Service engagement, we
+            will seek your separate, explicit consent.</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="how-we-collect" class="privacy-section">
+          <h2>3. How we collect personal information</h2>
+          <p>We collect personal information:</p>
+          <ul>
+            <li>directly from you, when you complete a form on our website, email us, call us, or message us;</li>
+            <li>automatically, through cookies and analytics tools when you browse our website; and</li>
+            <li>from publicly available sources (such as a company website or LinkedIn) when researching a prospective
+              client engagement.</li>
+          </ul>
+          <p>Where practicable, we collect personal information directly from the individual concerned. Where we receive
+            personal information from a third party (for example, a colleague submitting an enquiry on behalf of others
+            at their company), we expect that party to have the appropriate authority to share it with us.</p>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="why-we-collect" class="privacy-section">
+          <h2>4. Why we collect, hold, use and disclose personal information</h2>
+          <p>We collect and use personal information to:</p>
+          <ul>
+            <li>respond to enquiries and provide scope valuations or quotes;</li>
+            <li>deliver, support, and improve our Services;</li>
+            <li>communicate with clients and prospective clients, including via WhatsApp where you initiate or consent
+              to that channel;</li>
+            <li>manage recruitment and employment processes;</li>
+            <li>meet legal, regulatory, accounting, and taxation obligations; and</li>
+            <li>for direct marketing about our Services, where you have not opted out (see Section 9).</li>
+          </ul>
+          <p>We do not sell personal information, and we do not disclose it to third parties for their own marketing
+            purposes.</p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="cookies" class="privacy-section">
+          <h2>5. Cookies and website analytics</h2>
+          <p>Our website uses cookies and similar technologies to operate correctly and to understand how visitors use
+            the site. This may include:</p>
+          <ul>
+            <li><strong>Essential cookies:</strong> required for the website to function.</li>
+            <li><strong>Analytics cookies:</strong> to understand visitor behavior in aggregate.</li>
+          </ul>
+          <p>You can control or disable cookies through your browser settings. Disabling cookies may affect some website
+            functionality. We display a cookie consent banner on first visit, giving you the option to accept or decline
+            non-essential cookies.</p>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="whatsapp" class="privacy-section">
+          <h2>6. WhatsApp and third-party platforms</h2>
+          <p>A core part of our Services involves conversational automation delivered through the WhatsApp Business
+            Platform, operated by Meta Platforms, Inc. ("Meta"). If you or your organisations communicate with us or
+            with an ikorex-deployed automation system via WhatsApp:</p>
+          <ul>
+            <li>your messages are transmitted and processed through Meta's infrastructure, in accordance with WhatsApp's
+              Business Terms and Meta's Privacy Policy;</li>
+            <li>Meta may process this data outside Australia, including in the United States; and</li>
+            <li>we retain records of these communications as reasonably necessary to deliver and support the relevant
+              Service.</li>
+          </ul>
+          <p>We recommend reviewing WhatsApp's own privacy terms in addition to this policy before using that channel to
+            communicate with us.</p>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="disclosure" class="privacy-section">
+          <h2>7. Disclosure of personal information, including overseas</h2>
+          <p>We may disclose personal information to:</p>
+          <ul>
+            <li><strong>Our hosting provider:</strong> ikorex's production automation platform and client data are
+              hosted with an Australian-based provider, with data stored in Australia.</li>
+            <li><strong>Meta Platforms, Inc.:</strong> in connection with WhatsApp-based communications (see Section 6).
+              This is currently the primary overseas transfer connected to our Services.</li>
+            <li><strong>Professional advisers:</strong> such as our accountants or lawyers, where necessary.</li>
+            <li><strong>Regulators or law enforcement:</strong> where required or authorised by law.</li>
+            <li><strong>A prospective buyer or their advisers:</strong> in the event of a sale, merger, or restructure
+              of our business, subject to appropriate confidentiality protections.</li>
+          </ul>
+
+          <div class="privacy-highlight-box">
+            <h3>Overseas Disclosure Notice (APP 8)</h3>
+            <p>Personal information processed through our production automation platform (including client and customer
+              data handled via RPA, O2C/P2P, and finance automation Services) is hosted in Australia. The only currently
+              disclosed overseas transfer connected to our Services is to Meta Platforms, Inc., in the United States, in
+              connection with WhatsApp-based communications (see Section 6) &mdash; this is an inherent part of using
+              the WhatsApp Business Platform and cannot be avoided while that channel is offered. Where we do disclose
+              personal information overseas, we take reasonable steps to ensure the overseas recipient handles it
+              consistently with the Australian Privacy Principles, including through contractual protections where
+              appropriate.</p>
+          </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="client-processing" class="privacy-section">
+          <h2>8. Personal information we process on behalf of clients</h2>
+          <p>Where ikorex deploys RPA, WhatsApp automation, or AI computer vision systems (such as PPE detection, retail
+            intelligence, or hospitality analytics) for a client, we may process personal information belonging to our
+            client's customers, suppliers, employees, or site visitors (for example, transaction records, supplier
+            communications, or footage captured by a client's cameras) strictly as a service provider acting on that
+            client's instructions.</p>
+          <p>In these engagements:</p>
+          <ul>
+            <li>our client remains responsible, as the collector, for notifying individuals and obtaining any consents
+              required under the Privacy Act;</li>
+            <li>our computer vision products are designed to e.g. "process footage using anonymised behavioural
+              coordinates rather than identifying individuals" / "avoid facial recognition";</li>
+            <li>production systems that process this information are hosted in Australia (see Section 7), and are kept
+              separate from our development and staging environments; our developers do not use real client or customer
+              data for building or testing. Development and testing use synthetic or de-identified data only;</li>
+            <li>access to production systems is restricted to authorised personnel on a least-privilege basis, with
+              multi-factor authentication and logged access (see Section 10);</li>
+            <li>personal information processed on a client's behalf is handled under the terms of our services agreement
+              with that client, which includes confidentiality and data security obligations; and</li>
+            <li>this website privacy policy does not itself govern that processing; the client's own privacy policy and
+              our services agreement with them do.</li>
+          </ul>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="direct-marketing" class="privacy-section">
+          <h2>9. Direct marketing</h2>
+          <p>We may send you information about our Services if you have enquired with us or otherwise provided your
+            contact details for that purpose. You can opt out at any time by:</p>
+          <ul>
+            <li>clicking "unsubscribe" in any marketing email, or</li>
+            <li>contacting us using the details in Section 13.</li>
+          </ul>
+          <p>We will not send direct marketing via WhatsApp unless you have consented to that channel for that purpose.
+          </p>
+        </section>
+
+        <!-- Section 10 -->
+        <section id="data-security" class="privacy-section">
+          <h2>10. Data security</h2>
+          <p>We take reasonable steps to protect personal information from misuse, interference, loss, and unauthorised
+            access, modification, or disclosure, including:</p>
+          <ul>
+            <li>hosting production systems in Australia, separate from development and staging environments;</li>
+            <li>individual, multi-factor-authenticated accounts for all staff and developers, no shared logins;</li>
+            <li>restricted, least-privilege access to production systems, with production not directly reachable from
+              the internet;</li>
+            <li>encryption of personal information in transit and at rest;</li>
+            <li>centralised logging of access to production systems and personal information;</li>
+            <li>secrets and credentials (such as API keys and access tokens) held in a dedicated secrets manager, not
+              shared informally; and</li>
+            <li>staff confidentiality obligations and regular review of third-party service providers' security
+              practices.</li>
+          </ul>
+
+          <div class="privacy-highlight-box" style="border-left: 4px solid var(--accent-red);">
+            <h3>Data Breach &amp; NDB Compliance Notice</h3>
+            <p>No method of transmission or storage is completely secure. If we become aware of a data breach that is
+              likely to result in serious harm, we will comply with our obligations under the Notifiable Data Breaches
+              (NDB) scheme, including notifying affected individuals and the Office of the Australian Information
+              Commissioner (OAIC) where required.</p>
+          </div>
+        </section>
+
+        <!-- Section 11 -->
+        <section id="data-retention" class="privacy-section">
+          <h2>11. Data retention</h2>
+          <p>We retain personal information only for as long as reasonably necessary to fulfil the purposes described in
+            this policy, or as required by law (for example, tax and corporate record-keeping obligations). When no
+            longer required, we take reasonable steps to destroy or de-identify personal information.</p>
+        </section>
+
+        <!-- Section 12 -->
+        <section id="access-correction" class="privacy-section">
+          <h2>12. Access, correction, and complaints</h2>
+          <p><strong>Access and correction.</strong> You may request access to, or correction of, personal information
+            we hold about you by contacting us using the details below. We will respond within a reasonable period,
+            generally within 30 days. We may need to verify your identity before releasing information.</p>
+          <p><strong>Complaints.</strong> If you believe we have breached the Privacy Act or the Australian Privacy
+            Principles, please contact us first using the details below, and we will investigate and respond. If you are
+            not satisfied with our response, you may lodge a complaint with the Office of the Australian Information
+            Commissioner (OAIC):</p>
+          <ul>
+            <li><strong>Website:</strong> <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer"
+                style="color: var(--accent-orange);">www.oaic.gov.au</a></li>
+            <li><strong>Phone:</strong> 1300 363 992</li>
+          </ul>
+        </section>
+
+        <!-- Section 13 -->
+        <section id="contact" class="privacy-section">
+          <h2>13. Contact us</h2>
+          <p>For privacy questions, access/correction requests, or complaints, please reach out to us:</p>
+
+          <div class="contact-card-grid">
+            <div class="privacy-contact-card">
+              <h3>Privacy Contact</h3>
+              <p><a href="mailto:sales@ikorex.com.au">sales@ikorex.com.au</a></p>
+            </div>
+
+            <div class="privacy-contact-card">
+              <h3>Phone</h3>
+              <p><a href="tel:1800280626">1800 280 626</a></p>
+            </div>
+
+            <div class="privacy-contact-card" style="grid-column: span 1;">
+              <h3>Postal Address</h3>
+              <p style="font-size: 0.95rem; font-weight: 400; line-height: 1.5;">U 1/106 Camms Road,<br>Cranbourne, VIC
+                3977,<br>Australia</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 14 -->
+        <section id="childrens-privacy" class="privacy-section">
+          <h2>14. Children's privacy</h2>
+          <p>Our website and Services are directed at businesses and are not intended for individuals under 18. We do
+            not knowingly collect personal information from children.</p>
+        </section>
+
+        <!-- Section 15 -->
+        <section id="changes" class="privacy-section">
+          <h2>15. Changes to this policy</h2>
+          <p>We may update this policy from time to time to reflect changes in our practices or legal obligations. The
+            "Last updated" date at the top of this page reflects the most recent revision. We encourage you to review
+            this policy periodically.</p>
+        </section>
+
+        <!-- Section 16 -->
+        <section id="governing-law" class="privacy-section">
+          <h2>16. Governing law</h2>
+          <p>This policy is governed by the laws of Victoria, Australia.</p>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="section-container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img class="logo-img" src="logo.png" alt="iKOREX Logo">
+        </a>
+        <p class="brand-desc">Enterprise-grade intelligent automation for modern businesses. Empowering teams,
+          eliminating manual overhead, and optimizing output.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/ikorex/" class="social-link" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <div class="social-divider"></div>
+          <a href="https://x.com/ikorex_official" class="social-link" target="_blank" rel="noopener noreferrer"
+            aria-label="X">
+            <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor">
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z">
+              </path>
+            </svg>
+          </a>
+          <div class="social-divider"></div>
+          <a href="https://www.facebook.com/profile.php?id=61592559665178" class="social-link" target="_blank"
+            rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <div class="social-divider"></div>
+          <a href="https://www.instagram.com/ikorex_automation/" class="social-link" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Solutions</h4>
+          <a href="solutions.html">Solutions</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Support</a>
+        </div>
+        <div class="link-group">
+          <h4>Company</h4>
+          <a href="contact.html">Contact Team</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="link-group">
+          <h4>Get in Touch</h4>
+          <div class="contact-item">
+            <span class="footer-label">Address</span>
+            <span>U 1/106 Camms Road,<br>Cranbourne, VIC 3977</span>
+          </div>
+          <div class="contact-item">
+            <span class="footer-label">Email</span>
+            <a href="mailto:sales@ikorex.com.au">sales@ikorex.com.au</a>
+          </div>
+          <div class="contact-item">
+            <span class="footer-label">Phone</span>
+            <a href="tel:1800280626">1800 280 626</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom section-container">
+      <p>Copyright &copy; 2026 iKOREX. iKOREX &ndash; Intelligent Process Automation.</p>
+      <p style="font-size: 0.8rem; opacity: 0.8; letter-spacing: 0.02em;">ABN: 88 676 493 628 &nbsp;|&nbsp; ACN: 676 493
+        628</p>
+      <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2px;">Designed and developed by <a
+          href="https://www.ornabyte.com" target="_blank" rel="noopener noreferrer"
+          style="color: inherit; text-decoration: underline;">ornabyte</a></p>
+    </div>
+  </footer>
+
+  <!-- Theme and Custom JavaScript -->
+  <script src="main.js"></script>
+
+  <!-- Page-specific Scroll-spy and highlight sidebar links script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.privacy-section');
+      const navLinks = document.querySelectorAll('.privacy-nav-link');
+
+      function highlightSection() {
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY + 160; // Offset to match the sticky header
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', highlightSection);
+      highlightSection();
+    });
+  </script>
+</body>
+
+</html>
