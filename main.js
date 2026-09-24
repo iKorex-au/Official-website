@@ -334,4 +334,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Auto-play / pause card videos based on viewport intersection
+  const cardVideos = document.querySelectorAll('.engine-card-media video');
+  if (cardVideos.length > 0 && 'IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    cardVideos.forEach(v => videoObserver.observe(v));
+  }
 });
