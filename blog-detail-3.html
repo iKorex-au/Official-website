@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Alone Won't Transform Your Business. Connected Workflows Will. | iKOREX Insights</title>
+  <meta name="description"
+    content="Why adding AI to isolated tasks still leaves operations manual — and how connecting AI, automation, business systems, and human judgement creates true business transformation.">
+  <meta name="keywords"
+    content="connected workflows, AI automation, intelligent process automation, business process management, enterprise workflows, invoice automation, iKOREX">
+
+  <!-- Inter Tight & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased">
+  <!-- Theme Init Script -->
+  <script>
+    (function () {
+      try {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.body.classList.add('dark-theme');
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="readingProgressBar"></div>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copyToast">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>Article link copied to clipboard!</span>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="logo.png" alt="iKOREX Logo">
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="nav-links">
+        <a href="index.html#hero">Home</a>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="index.html#blog" class="active">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-cta">
+          <a href="index.html#get-started" class="btn btn-primary btn-sm">Start Trial</a>
+        </div>
+      </nav>
+
+      <!-- Right CTA & Theme Toggle -->
+      <div class="nav-cta">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="index.html#get-started" class="btn btn-primary btn-sm">Start Trial</a>
+      </div>
+
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Article Hero Header -->
+  <header class="article-header-section">
+    <div class="grid-overlay"></div>
+    <div class="section-container" style="position: relative; z-index: 2;">
+      <!-- Breadcrumb navigation -->
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <span class="separator">/</span>
+        <a href="index.html#blog">Articles &amp; Insights</a>
+        <span class="separator">/</span>
+        <span style="color: var(--text-main); font-weight: 500;">AI Alone Won't Transform Your Business. Connected Workflows Will.</span>
+      </nav>
+
+      <!-- Eyebrow Badge -->
+      <div style="margin-bottom: 20px;">
+        <div class="custom-badge">
+          <span class="badge-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" class="badge-svg">
+              <defs>
+                <linearGradient id="logo-icon-grad-top-b3" x1="3" y1="3" x2="21" y2="12" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00b4ff" />
+                  <stop offset="100%" stop-color="#0088ff" />
+                </linearGradient>
+                <linearGradient id="logo-icon-grad-bottom-b3" x1="3" y1="21" x2="21" y2="12" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#0055cc" />
+                  <stop offset="100%" stop-color="#0088ff" />
+                </linearGradient>
+              </defs>
+              <path d="M3 3 L21 12 L8 12 L3 9 Z" fill="url(#logo-icon-grad-top-b3)" />
+              <path d="M3 21 L21 12 L8 12 L3 15 Z" fill="url(#logo-icon-grad-bottom-b3)" />
+            </svg>
+          </span>
+          <span class="badge-text">iKOREX &bull; Business Process Automation</span>
+        </div>
+      </div>
+
+      <h1 class="article-headline">AI Alone Won&rsquo;t Transform Your Business. Connected Workflows Will.</h1>
+      <p class="article-lead">
+        AI can write the email, analyse the document, and summarise the report. But someone still has to copy the output, update systems, and notify people. Real transformation happens when you connect what comes before and after the AI.
+      </p>
+
+      <!-- Author and Meta Row -->
+      <div class="article-author-bar">
+        <div class="author-info-group">
+          <img src="assets/images/Team/subin_peter.png" alt="Subin Peter" class="author-avatar">
+          <div class="author-details">
+            <span class="author-name">Subin Peter</span>
+            <span class="author-role">Co-Founder &amp; COO, iKOREX</span>
+          </div>
+        </div>
+
+        <div class="article-pub-meta">
+          <span><strong style="color: var(--text-main);">Published:</strong> January 25, 2025</span>
+          <span class="blog-card-separator">&bull;</span>
+          <span><strong style="color: var(--text-main);">Reading Time:</strong> 6 min read</span>
+          <span class="blog-card-separator">&bull;</span>
+          <span style="color: var(--accent-orange); font-weight: 500;">Connected Systems</span>
+        </div>
+
+        <div class="article-actions">
+          <button class="action-btn" id="shareCopyBtn" aria-label="Copy link to article">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+            <span>Share</span>
+          </button>
+          <a href="https://twitter.com/intent/tweet?text=AI%20Alone%20Won%27t%20Transform%20Your%20Business.%20Connected%20Workflows%20Will.&url=" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="Share on X">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="Share on LinkedIn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured Image Banner -->
+      <div class="article-featured-media">
+        <img src="assets/images/blog-connected-workflows.jpg" alt="3D isometric corporate data architecture showing end-to-end connected workflows across cognitive AI, CRM systems, automated execution, and human decision checkpoints" class="article-featured-img">
+        <p class="article-img-caption">Figure 1.0: End-to-end connected workflow architecture — unifying cognitive AI, business systems, automated execution, and human decision checkpoints.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body & Sidebar -->
+  <section class="article-content-section">
+    <div class="section-container article-layout-grid">
+      <!-- Left Column: Main Editorial Content -->
+      <main class="article-body">
+        <p>
+          AI can write the email.
+        </p>
+        <p>
+          It can analyse the document. It can summarise the report. It can classify the request.
+        </p>
+        <p>
+          <strong>But then what?</strong>
+        </p>
+        <p>
+          Someone still has to copy the output, update the system, notify the next person, trigger the next step, and follow up.
+        </p>
+        <p>
+          That is where many AI implementations stop.
+        </p>
+
+        <!-- Quote Block -->
+        <blockquote class="article-quote" style="border-left-color: var(--accent-orange); font-size: 1.15rem;">
+          The AI works.<br>
+          The workflow doesn&rsquo;t.<br>
+          <strong>And there is a big difference.</strong>
+        </blockquote>
+
+        <!-- Callout Box -->
+        <div class="article-callout">
+          <div class="callout-header">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>The Core Insight</span>
+          </div>
+          <div class="callout-body">
+            Value isn't created when AI generates an answer. Value is created when that answer <strong>moves the business forward</strong> without manual friction.
+          </div>
+        </div>
+
+        <!-- Mobile Quick-Access Table of Contents -->
+        <details class="mobile-toc-accordion">
+          <summary class="mobile-toc-summary">
+            <span class="mobile-toc-title">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+              Table of Contents
+            </span>
+            <svg class="mobile-toc-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <nav class="toc-list" aria-label="Mobile Table of Contents">
+            <a href="#problem-with-individual-tasks" class="toc-link">1. The Problem With Adding AI to Individual Tasks</a>
+            <a href="#opportunity-between-tasks" class="toc-link">2. The Real Opportunity Is Between the Tasks</a>
+            <a href="#ai-shouldnt-be-whole-workflow" class="toc-link">3. AI Shouldn't Be the Whole Workflow (The 4 Pillars)</a>
+            <a href="#case-study-invoice-processing" class="toc-link">4. Take Invoice Processing: Traditional vs Connected</a>
+            <a href="#where-automation-becomes-valuable" class="toc-link">5. This Is Where Automation Becomes More Valuable</a>
+            <a href="#goal-isnt-to-remove-people" class="toc-link">6. The Goal Isn't to Remove People</a>
+            <a href="#ask-a-better-question" class="toc-link">7. Ask a Better Question (Workflow Diagnostic)</a>
+            <a href="#dont-build-tool-build-workflow" class="toc-link">8. Don't Build an AI Tool. Build a Workflow.</a>
+            <a href="#business-may-not-need-more-ai" class="toc-link">9. Your Business May Not Need More AI</a>
+            <a href="#how-ikorex-delivers" class="toc-link">10. The iKOREX Approach to Connected Operations</a>
+          </nav>
+        </details>
+
+        <!-- Section 1 -->
+        <h2 id="problem-with-individual-tasks">1. The Problem With Adding AI to Individual Tasks</h2>
+        <p>
+          A business might introduce AI into several disconnected corners of its daily operation:
+        </p>
+        <ul class="article-checklist">
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span>AI writes customer emails.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span>AI extracts information from invoices.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span>AI summarises incoming documents.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span>AI classifies customer service requests.</span>
+          </li>
+        </ul>
+        <p>
+          Each tool may perform its individual task remarkably well.
+        </p>
+        <p>
+          <strong>But if employees still have to manually move information between systems, the business hasn&rsquo;t really automated the workflow.</strong>
+        </p>
+        <p>
+          The process now simply looks like this:
+        </p>
+
+        <!-- Bottleneck Flow Box -->
+        <div class="flow-comparison-box">
+          <div style="font-size: 0.8rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; color: #ef4444; font-weight: 600;">
+            The Disconnected AI Bottleneck
+          </div>
+          <div class="flow-step-row">
+            <span class="flow-step-tag good">AI Output</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="flow-step-tag bad">Copy</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="flow-step-tag bad">Paste</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="flow-step-tag bad">Update System</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="flow-step-tag bad">Notify Person</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="flow-step-tag bad">Follow Up</span>
+          </div>
+          <div style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+            The AI may be smart. But the workflow is still completely manual.
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <h2 id="opportunity-between-tasks">2. The Real Opportunity Is Between the Tasks</h2>
+        <p>
+          Think about what happens right after an AI system produces an answer.
+        </p>
+        <p>
+          Where does that answer go? Does someone:
+        </p>
+        <ul class="article-checklist">
+          <li>
+            <span class="checklist-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">&bull;</span>
+            <span>Copy it into the CRM?</span>
+          </li>
+          <li>
+            <span class="checklist-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">&bull;</span>
+            <span>Update an accounting system or ledger?</span>
+          </li>
+          <li>
+            <span class="checklist-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">&bull;</span>
+            <span>Draft and send a confirmation email?</span>
+          </li>
+          <li>
+            <span class="checklist-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">&bull;</span>
+            <span>Create a task in project management software?</span>
+          </li>
+          <li>
+            <span class="checklist-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">&bull;</span>
+            <span>Notify a team manager over Slack or email?</span>
+          </li>
+          <li>
+            <span class="checklist-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">&bull;</span>
+            <span>Move the customer record to another pipeline stage?</span>
+          </li>
+          <li>
+            <span class="checklist-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">&bull;</span>
+            <span>Wait days for manual sign-off and follow up later?</span>
+          </li>
+        </ul>
+
+        <p>
+          If the answer is yes, the AI is only solving one small fraction of the business process.
+        </p>
+        <p>
+          The greatest operational opportunity isn't necessarily to make the AI smarter.
+        </p>
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--text-main);">
+          It is to connect what happens before and after the AI.
+        </p>
+
+        <!-- Section 3 -->
+        <h2 id="ai-shouldnt-be-whole-workflow">3. AI Shouldn't Be the Whole Workflow (The 4 Pillars)</h2>
+        <p>
+          A useful and scalable way to design an intelligent enterprise workflow is to give each component a specific, well-defined responsibility:
+        </p>
+
+        <!-- 4 Pillars Grid -->
+        <div class="pillars-grid">
+          <!-- Pillar 1: AI -->
+          <div class="pillar-card ai-pillar">
+            <div class="pillar-header">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a8 8 0 0 0-8 8c0 3.5 2 6 4 7.5V20a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.5c2-1.5 4-4 4-7.5a8 8 0 0 0-8-8z"></path>
+                  <line x1="10" y1="22" x2="14" y2="22"></line>
+                </svg>
+              </div>
+              <div>
+                <span class="pillar-role">Cognition &amp; Understanding</span>
+                <div class="pillar-title">AI &rarr; Understands &amp; Reasons</div>
+              </div>
+            </div>
+            <p class="pillar-desc">
+              AI can interpret unstructured information, extract context and meaning, and deal with ambiguous or variable inputs that rigid code cannot parse.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Automation -->
+          <div class="pillar-card auto-pillar">
+            <div class="pillar-header">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="pillar-role">Execution &amp; Movement</span>
+                <div class="pillar-title">Automation &rarr; Executes &amp; Moves Work</div>
+              </div>
+            </div>
+            <p class="pillar-desc">
+              Deterministic automation triggers actions, enforces validation rules, routes data between systems, and propels a process from one stage to the next with zero lag.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Business Systems -->
+          <div class="pillar-card system-pillar">
+            <div class="pillar-header">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div>
+                <span class="pillar-role">Source of Truth</span>
+                <div class="pillar-title">Business Systems &rarr; Store &amp; Update</div>
+              </div>
+            </div>
+            <p class="pillar-desc">
+              Your CRM, ERP, accounting software, databases, or helpdesk platform remain the authoritative source of operational truth and business record.
+            </p>
+          </div>
+
+          <!-- Pillar 4: People -->
+          <div class="pillar-card human-pillar">
+            <div class="pillar-header">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="pillar-role">Human Judgement</span>
+                <div class="pillar-title">People &rarr; Handle Decisions &amp; Exceptions</div>
+              </div>
+            </div>
+            <p class="pillar-desc">
+              Humans step in where nuance, high-stakes financial approvals, ethical discretion, or unusual edge cases require real-world discernment.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          The result is <strong>not</strong> AI replacing the entire workflow.
+        </p>
+        <p>
+          It is AI becoming one highly effective, intelligent component working synchronously inside the workflow.
+        </p>
+
+        <!-- Section 4 -->
+        <h2 id="case-study-invoice-processing">4. Take Invoice Processing: Traditional vs Connected</h2>
+        <p>
+          Consider a typical incoming vendor invoice:
+        </p>
+
+        <!-- Traditional vs Connected Workflow Visual -->
+        <div class="calc-formula-card">
+          <div class="calc-formula-title" style="color: #ef4444;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            Traditional Manual Process
+          </div>
+          <div class="workflow-chain" style="margin: 0; background: rgba(0,0,0,0.1);">
+            <span class="workflow-step">Invoice arrives</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step">Employee processes</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step">Manual data entry</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step">Manual check</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step">Approval wait</span>
+          </div>
+        </div>
+
+        <div class="calc-formula-card" style="border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(0, 180, 255, 0.03) 100%);">
+          <div class="calc-formula-title" style="color: var(--accent-green);">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Connected Autonomous Workflow
+          </div>
+          <div class="workflow-chain" style="margin: 0; background: rgba(0,0,0,0.1);">
+            <span class="workflow-step">Invoice arrives</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step" style="color: #a855f7; border-color: rgba(168, 85, 247, 0.3);">AI extracts data</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step" style="color: var(--accent-orange); border-color: rgba(0, 180, 255, 0.3);">Automation validates</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step">Rules route</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step">System updates</span>
+            <span class="workflow-arrow">&rarr;</span>
+            <span class="workflow-step" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">Approval / Exceptions to people</span>
+          </div>
+        </div>
+
+        <!-- Inline Figure 2.0 -->
+        <div class="article-featured-media" style="margin: 36px 0;">
+          <img src="assets/images/blog-invoice-automation.jpg" alt="Automated Invoice Processing Pipeline showing cognitive OCR extraction, multi-tier validation, ERP synchronization, and exception handling" class="article-featured-img">
+          <p class="article-img-caption">Figure 2.0: Automated Invoice Processing Pipeline — cognitive OCR extraction, multi-tier validation, ERP synchronization, and exception handling.</p>
+        </div>
+
+        <p>
+          The difference isn't simply that AI was added into the mix.
+        </p>
+        <p>
+          <strong>The difference is that the entire process is connected.</strong>
+        </p>
+        <ul class="article-checklist">
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>AI handles the part that requires understanding</strong> (deciphering scanned PDFs, handwritten notes, varied formatting).</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Automation handles the predictable actions</strong> (moving data, checking thresholds, pinging servers).</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Business systems receive the information directly</strong> without human copy-pasting.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>People handle the exceptions and final approvals</strong> only when rules detect anomalies.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>The workflow keeps moving continuously</strong> 24/7/365.</span>
+          </li>
+        </ul>
+
+        <!-- Section 5 -->
+        <h2 id="where-automation-becomes-valuable">5. This Is Where Automation Becomes More Valuable</h2>
+        <p>
+          Imagine an invoice arrives with:
+        </p>
+        <ul style="color: var(--text-main); font-weight: 500; line-height: 1.8; margin-left: 20px;">
+          <li>• Supplier information &amp; tax ID</li>
+          <li>• Invoice number &amp; issue date</li>
+          <li>• Line items &amp; total amount</li>
+          <li>• Tax (GST) details</li>
+          <li>• Purchase order reference</li>
+        </ul>
+        <p>
+          AI can reliably extract all the relevant information from that raw PDF document.
+        </p>
+        <p>
+          <strong>But extraction alone doesn&rsquo;t complete the business process.</strong>
+        </p>
+        <p>
+          The connected workflow then automatically:
+        </p>
+
+        <!-- Vertical Workflow Steps -->
+        <div class="workflow-chain" style="flex-direction: column; align-items: flex-start; gap: 12px; padding: 22px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="workflow-step" style="font-weight: 600;">1. Validate the extracted information</span>
+          </div>
+          <div style="padding-left: 14px; color: var(--accent-orange); font-weight: bold;">&darr;</div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="workflow-step" style="font-weight: 600;">2. Check business rules &amp; spend limits</span>
+          </div>
+          <div style="padding-left: 14px; color: var(--accent-orange); font-weight: bold;">&darr;</div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="workflow-step" style="font-weight: 600;">3. Match against existing purchase orders in ERP</span>
+          </div>
+          <div style="padding-left: 14px; color: var(--accent-orange); font-weight: bold;">&darr;</div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="workflow-step" style="font-weight: 600;">4. Route it for the appropriate manager sign-off</span>
+          </div>
+          <div style="padding-left: 14px; color: var(--accent-orange); font-weight: bold;">&darr;</div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="workflow-step" style="font-weight: 600;">5. Update the relevant accounting system</span>
+          </div>
+          <div style="padding-left: 14px; color: var(--accent-orange); font-weight: bold;">&darr;</div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="workflow-step" style="font-weight: 600; color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">6. Route exceptions to a person</span>
+          </div>
+        </div>
+
+        <p>
+          Now the finance employee isn't manually moving information between five different browser tabs.
+        </p>
+        <p>
+          They are involved exclusively where their judgement actually matters. <strong>That is a much more meaningful use of AI.</strong>
+        </p>
+
+        <!-- Section 6 -->
+        <h2 id="goal-isnt-to-remove-people">6. The Goal Isn't to Remove People</h2>
+        <p>
+          Connected automation isn't about replacing people with software.
+        </p>
+        <p>
+          <strong>It is about removing people from work that doesn&rsquo;t require their judgement.</strong>
+        </p>
+
+        <!-- Human Evolution Grid -->
+        <div class="human-evolution-grid">
+          <div class="evolution-card remove">
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); text-transform: uppercase; color: #ef4444; font-weight: 600; letter-spacing: 0.05em;">
+              Remove Humans From
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 600; color: var(--text-main);">
+              Low-Value Repetitive Overhead
+            </div>
+            <ul class="scenario-list">
+              <li>&bull; Repetitive data entry and processing</li>
+              <li>&bull; Manual handoffs between teammates</li>
+              <li>&bull; Routine system record updates</li>
+              <li>&bull; Copying information between platforms</li>
+              <li>&bull; Sending repetitive email notifications</li>
+              <li>&bull; Standard administrative data checks</li>
+            </ul>
+          </div>
+
+          <div class="evolution-card elevate">
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-green); font-weight: 600; letter-spacing: 0.05em;">
+              Elevate Humans Toward
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 600; color: var(--text-main);">
+              High-Impact Strategic Work
+            </div>
+            <ul class="scenario-list">
+              <li>&bull; Critical business judgement</li>
+              <li>&bull; High-stakes commercial decisions</li>
+              <li>&bull; Meaningful customer relationships</li>
+              <li>&bull; Strategy, innovation, and business growth</li>
+              <li>&bull; Creative problem-solving</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>
+          That is where human involvement creates genuine enterprise value.
+        </p>
+
+        <!-- Section 7 -->
+        <h2 id="ask-a-better-question">7. Ask a Better Question (Workflow Diagnostic)</h2>
+        <p>
+          This is where businesses need to fundamentally change how they approach AI.
+        </p>
+        <p>
+          Instead of asking: <em>&ldquo;Where can we use AI?&rdquo;</em>
+        </p>
+        <p>
+          Ask:
+        </p>
+        <blockquote class="article-quote" style="border-left-color: var(--accent-green); font-size: 1.15rem;">
+          &ldquo;Where does this workflow actually need intelligence?&rdquo;
+        </blockquote>
+
+        <p>
+          That single question forces you to examine the entire end-to-end process:
+        </p>
+
+        <div class="consultation-feature-card" style="margin: 28px 0;">
+          <h3 style="display: flex; align-items: center; gap: 10px;">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            The 7 Workflow Architecture Questions
+          </h3>
+          <ul class="article-checklist" style="margin: 0;">
+            <li>
+              <span class="checklist-icon">&check;</span>
+              <span><strong>Where does information enter?</strong> Identifying origin APIs, emails, portals, or files.</span>
+            </li>
+            <li>
+              <span class="checklist-icon">&check;</span>
+              <span><strong>Where does it need interpretation?</strong> Pinpointing unstructured text or image inputs.</span>
+            </li>
+            <li>
+              <span class="checklist-icon">&check;</span>
+              <span><strong>What happens immediately after the interpretation?</strong> Structuring the extracted output.</span>
+            </li>
+            <li>
+              <span class="checklist-icon">&check;</span>
+              <span><strong>Which actions are predictable?</strong> Automating validation rules and status updates.</span>
+            </li>
+            <li>
+              <span class="checklist-icon">&check;</span>
+              <span><strong>Which systems need updating?</strong> Connecting CRMs, ERPs, accounting, and billing ledgers.</span>
+            </li>
+            <li>
+              <span class="checklist-icon">&check;</span>
+              <span><strong>Where does human approval matter?</strong> Embedding approval thresholds and governance gates.</span>
+            </li>
+            <li>
+              <span class="checklist-icon">&check;</span>
+              <span><strong>What happens when something goes wrong?</strong> Establishing graceful fallbacks and escalation routing.</span>
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          Once you map those specific points, the precise role of AI becomes crystal clear.
+        </p>
+        <p>
+          • Everything that can be reliably automated should be automated.<br>
+          • AI should be introduced where interpretation creates value.<br>
+          • People should remain involved where judgement matters.
+        </p>
+
+        <!-- Section 8 -->
+        <h2 id="dont-build-tool-build-workflow">8. Don't Build an AI Tool. Build a Workflow.</h2>
+        <p>
+          This is the difference between adding a point solution to a business and actually redesigning how the organization operates.
+        </p>
+        <p>
+          An isolated AI tool might save an individual employee 10 minutes on one task.
+        </p>
+        <p>
+          <strong>A connected workflow transforms what happens from trigger to outcome across the entire business.</strong>
+        </p>
+        <p>
+          That means looking beyond individual tools and orchestrating how your entire stack functions together:
+        </p>
+
+        <div class="calc-formula-card">
+          <div class="calc-formula-title">The Connected Enterprise Stack</div>
+          <div class="calc-formula-code">
+AI (Cognition)  +  Automation (Speed)  +  Business Systems (Truth)  +  People (Judgement)
+          </div>
+          <div class="calc-formula-result">
+            Because the value isn't created when AI generates an answer. <strong>The value is created when that answer moves the business forward.</strong>
+          </div>
+        </div>
+
+        <!-- Section 9 -->
+        <h2 id="business-may-not-need-more-ai">9. Your Business May Not Need More AI</h2>
+        <p>
+          It may need better-connected workflows.
+        </p>
+        <p>
+          Here is how to get started today:
+        </p>
+        <ul class="article-checklist">
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Start by identifying one process</strong> that still contains too many manual handoffs.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Map every single step</strong> from initiation to final completion.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Find where information gets stuck</strong> between platforms or people.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Identify what genuinely requires intelligence</strong> vs deterministic rules.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Automate what follows predictable rules</strong> without hesitation.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Connect the systems</strong> directly through modern APIs and webhooks.</span>
+          </li>
+          <li>
+            <span class="checklist-icon">&check;</span>
+            <span><strong>Keep people positioned</strong> where their judgement and empathy matter most.</span>
+          </li>
+        </ul>
+
+        <!-- Section 10 -->
+        <h2 id="how-ikorex-delivers">10. The iKOREX Approach to Connected Operations</h2>
+        <p>
+          That is the exact philosophy we champion at <strong>iKOREX</strong>:
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.65; color: var(--text-main);">
+          Start with the workflow. Automate what can be automated. Add AI where it creates measurable value. And connect the systems that keep your business moving forward.
+        </p>
+
+        <blockquote class="article-quote" style="border-left-color: var(--accent-orange); font-size: 1.15rem;">
+          The smartest workflow isn't the one with AI everywhere.<br>
+          <strong>It's the one where every technology has a job.</strong>
+        </blockquote>
+
+        <!-- Consultation Card -->
+        <div class="consultation-feature-card">
+          <h3>Ready to Connect Your Disconnected Workflows?</h3>
+          <p>
+            Book a complimentary 30-minute Workflow Audit with our engineering team in Melbourne. We will review your current manual handoffs and design a tailored architecture connecting your AI, business systems, and automated execution.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Schedule Your Free Workflow Audit &rarr;</a>
+        </div>
+
+        <!-- Article Footer Meta & Reactions -->
+        <div class="article-footer-meta">
+          <div class="article-tags">
+            <span style="font-size: 0.85rem; color: var(--text-muted); align-self: center; margin-right: 4px;">Tags:</span>
+            <a href="index.html#blog" class="article-tag">Connected Workflows</a>
+            <a href="index.html#blog" class="article-tag">Intelligent Automation</a>
+            <a href="index.html#blog" class="article-tag">Invoice Processing</a>
+            <a href="index.html#blog" class="article-tag">Business Systems</a>
+            <a href="index.html#blog" class="article-tag">Operational Strategy</a>
+          </div>
+
+          <!-- Interactive Reaction Row -->
+          <div class="article-reaction-row">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <button class="reaction-btn" id="reactionBtn" aria-label="Was this article helpful?">
+                <svg id="reactionHeart" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span>Insightful article</span>
+              </button>
+              <span class="reaction-count" id="reactionCount">216</span>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+              Found this useful? Share it with your team.
+            </div>
+          </div>
+
+          <!-- Author Bio Card -->
+          <div class="author-box-card">
+            <img src="assets/images/Team/subin_peter.png" alt="Subin Peter" class="author-box-img">
+            <div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-main); margin-bottom: 4px;">Subin Peter</div>
+              <div style="font-size: 0.85rem; color: var(--accent-orange); margin-bottom: 8px; font-weight: 500;">Co-Founder &amp; COO, iKOREX</div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin: 0;">
+                Subin leads operations and product architecture at iKOREX, helping Australian businesses design robust, fail-safe automation architectures and deploy pragmatic AI solutions that generate measurable return on investment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right Column: Sticky Sidebar -->
+      <aside class="article-sidebar">
+        <!-- Table of Contents Widget -->
+        <div class="sidebar-widget">
+          <div class="widget-title">Table of Contents</div>
+          <nav class="toc-list" aria-label="Table of contents">
+            <a href="#problem-with-individual-tasks" class="toc-link">1. Problem With Individual Tasks</a>
+            <a href="#opportunity-between-tasks" class="toc-link">2. Opportunity Is Between Tasks</a>
+            <a href="#ai-shouldnt-be-whole-workflow" class="toc-link">3. AI Shouldn't Be Whole Workflow</a>
+            <a href="#case-study-invoice-processing" class="toc-link">4. Invoice Processing Case Study</a>
+            <a href="#where-automation-becomes-valuable" class="toc-link">5. Where Automation Becomes Valuable</a>
+            <a href="#goal-isnt-to-remove-people" class="toc-link">6. Goal Isn't to Remove People</a>
+            <a href="#ask-a-better-question" class="toc-link">7. Ask a Better Question</a>
+            <a href="#dont-build-tool-build-workflow" class="toc-link">8. Don't Build Tool, Build Workflow</a>
+            <a href="#business-may-not-need-more-ai" class="toc-link">9. Business Needs Connected Workflows</a>
+            <a href="#how-ikorex-delivers" class="toc-link">10. The iKOREX Approach</a>
+          </nav>
+        </div>
+
+        <!-- Reading Metrics Widget -->
+        <div class="sidebar-widget">
+          <div class="widget-title">Article Summary</div>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.88rem;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+              <span style="color: var(--text-muted);">Format</span>
+              <span style="font-weight: 500; color: var(--text-main);">Enterprise Guide</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+              <span style="color: var(--text-muted);">Est. Reading Time</span>
+              <span style="font-weight: 500; color: var(--text-main);">6 Minutes</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+              <span style="color: var(--text-muted);">Target Audience</span>
+              <span style="font-weight: 500; color: var(--text-main);">Ops Leaders &amp; Executives</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Key Principle</span>
+              <span style="font-weight: 500; color: var(--accent-orange);">Connected Operations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar CTA Widget -->
+        <div class="sidebar-cta-widget">
+          <h4>Eliminate Manual Handoffs</h4>
+          <p>Schedule a 30-minute discovery session to map your processes and connect your core platforms.</p>
+          <a href="contact.html" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">Book 30-Min Audit</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Related Articles Section -->
+  <section class="section-container" style="padding-top: 20px; padding-bottom: 60px;">
+    <div style="border-top: 1px solid var(--border-color); padding-top: 50px;">
+      <div style="margin-bottom: 28px;">
+        <div class="custom-badge" style="margin-bottom: 12px;">
+          <span class="badge-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" class="badge-svg">
+              <path d="M3 3 L21 12 L8 12 L3 9 Z" fill="url(#logo-icon-grad-top-b3)" />
+              <path d="M3 21 L21 12 L8 12 L3 15 Z" fill="url(#logo-icon-grad-bottom-b3)" />
+            </svg>
+          </span>
+          <span class="badge-text">Continue Reading</span>
+        </div>
+        <h2 style="font-size: 1.85rem; font-weight: 600; color: var(--text-main); letter-spacing: -0.02em;">Related Articles &amp; Insights</h2>
+      </div>
+
+      <div class="related-articles-grid">
+        <!-- Related Card 1: Blog 1 -->
+        <article class="blog-card">
+          <a href="blog-detail.html" class="blog-card-link">
+            <div class="blog-card-img-wrap">
+              <img src="assets/images/blog-operational-cost.jpg" alt="The Smallest Tasks Can Become Your Biggest Operational Cost" class="blog-card-img" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-date">January 15, 2025</span>
+                <span class="blog-card-separator">&bull;</span>
+                <span class="blog-card-read">6 min read</span>
+              </div>
+              <h3 class="blog-card-title">The Smallest Tasks Can Become Your Biggest Operational Cost</h3>
+            </div>
+          </a>
+        </article>
+
+        <!-- Related Card 2: Blog 2 -->
+        <article class="blog-card">
+          <a href="blog-detail-2.html" class="blog-card-link">
+            <div class="blog-card-img-wrap">
+              <img src="assets/images/blog-ai-decision.jpg" alt="Before You Add AI to a Workflow, Ask One Question" class="blog-card-img" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-date">January 20, 2025</span>
+                <span class="blog-card-separator">&bull;</span>
+                <span class="blog-card-read">5 min read</span>
+              </div>
+              <h3 class="blog-card-title">Before You Add AI to a Workflow, Ask One Question</h3>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-Footer CTA Section -->
+  <section class="cta-section" id="get-started">
+    <div class="section-container">
+      <div class="cta-card">
+        <div class="cta-glow"></div>
+        <div class="cta-content">
+          <h2 class="cta-title">Ready to Automate Your Operations?</h2>
+          <p class="cta-description">Let's build custom workflows that eliminate manual overhead, optimize accuracy, and
+            save hours of work. Schedule a discovery call with our experts today.</p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
+            <a href="solutions.html" class="btn btn-secondary">Explore Use Cases</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="section-container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img class="logo-img" src="logo.png" alt="iKOREX Logo">
+        </a>
+        <p class="brand-desc">Enterprise-grade intelligent automation for modern businesses. Empowering teams,
+          eliminating manual overhead, and optimizing output.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <div class="social-divider"></div>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+              </path>
+            </svg>
+          </a>
+          <div class="social-divider"></div>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <div class="social-divider"></div>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Solutions</h4>
+          <a href="solutions.html">Solutions</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Support</a>
+        </div>
+        <div class="link-group">
+          <h4>Company</h4>
+          <a href="index.html#blog">Blog &amp; Insights</a>
+          <a href="contact.html">Contact Team</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="link-group">
+          <h4>Get in Touch</h4>
+          <div class="contact-item">
+            <span class="footer-label">Address</span>
+            <span>U 1/106 Camms Road,<br>Cranbourne, VIC 3977</span>
+          </div>
+          <div class="contact-item">
+            <span class="footer-label">Email</span>
+            <a href="mailto:sales@ikorex.com.au">sales@ikorex.com.au</a>
+          </div>
+          <div class="contact-item">
+            <span class="footer-label">Phone</span>
+            <a href="tel:1800280626">1800 280 626</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom section-container">
+      <p>Copyright &copy; 2026 iKOREX. iKOREX &ndash; Intelligent Process Automation.</p>
+      <p style="font-size: 0.8rem; opacity: 0.8; letter-spacing: 0.02em;">ABN: 88 676 493 628 &nbsp;|&nbsp; ACN: 676 493 628</p>
+      <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2px;">Designed and developed by <a href="https://www.ornabyte.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ornabyte</a></p>
+    </div>
+  </footer>
+
+  <!-- Theme & Custom JavaScript -->
+  <script src="main.js"></script>
+
+  <!-- Blog Detail Interactive Features -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Reading Progress Bar
+      const progressBar = document.getElementById('readingProgressBar');
+      const updateReadingProgress = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (docHeight > 0 && progressBar) {
+          const scrollPercentage = (scrollTop / docHeight) * 100;
+          progressBar.style.width = `${Math.min(100, Math.max(0, scrollPercentage))}%`;
+        }
+      };
+      window.addEventListener('scroll', updateReadingProgress, { passive: true });
+      updateReadingProgress();
+
+      // 2. Table of Contents ScrollSpy
+      const headings = document.querySelectorAll('.article-body h2[id]');
+      const tocLinks = document.querySelectorAll('.toc-link');
+
+      const onScrollSpy = () => {
+        let currentId = '';
+        const scrollPosition = window.scrollY + 140;
+
+        headings.forEach(heading => {
+          const top = heading.offsetTop;
+          if (scrollPosition >= top) {
+            currentId = heading.getAttribute('id');
+          }
+        });
+
+        if (currentId) {
+          tocLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      };
+      window.addEventListener('scroll', onScrollSpy, { passive: true });
+
+      // Mobile TOC auto-collapse when a link is clicked
+      const mobileToc = document.querySelector('.mobile-toc-accordion');
+      if (mobileToc) {
+        mobileToc.querySelectorAll('.toc-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileToc.removeAttribute('open');
+          });
+        });
+      }
+
+      // 3. Share / Copy Link Button
+      const shareCopyBtn = document.getElementById('shareCopyBtn');
+      const copyToast = document.getElementById('copyToast');
+      if (shareCopyBtn && copyToast) {
+        shareCopyBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            copyToast.classList.add('show');
+            setTimeout(() => {
+              copyToast.classList.remove('show');
+            }, 3000);
+          } catch (err) {
+            const input = document.createElement('input');
+            input.value = window.location.href;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            copyToast.classList.add('show');
+            setTimeout(() => {
+              copyToast.classList.remove('show');
+            }, 3000);
+          }
+        });
+      }
+
+      // 4. Insightful / Helpful Reaction Counter
+      const reactionBtn = document.getElementById('reactionBtn');
+      const reactionCount = document.getElementById('reactionCount');
+      const reactionHeart = document.getElementById('reactionHeart');
+      let reacted = false;
+
+      if (reactionBtn && reactionCount && reactionHeart) {
+        reactionBtn.addEventListener('click', () => {
+          let count = parseInt(reactionCount.textContent, 10) || 216;
+          if (!reacted) {
+            reacted = true;
+            reactionCount.textContent = count + 1;
+            reactionHeart.setAttribute('fill', '#ef4444');
+            reactionHeart.setAttribute('stroke', '#ef4444');
+            reactionBtn.style.color = '#ef4444';
+            reactionBtn.style.transform = 'scale(1.1)';
+            setTimeout(() => { reactionBtn.style.transform = 'scale(1)'; }, 200);
+          } else {
+            reacted = false;
+            reactionCount.textContent = count - 1;
+            reactionHeart.setAttribute('fill', 'none');
+            reactionHeart.setAttribute('stroke', 'currentColor');
+            reactionBtn.style.color = 'var(--text-main)';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
