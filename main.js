@@ -363,7 +363,11 @@ document.addEventListener('DOMContentLoaded', () => {
       container.appendChild(playBtn);
     }
 
+    // Find sound / mute button
+    const muteBtn = container.querySelector('.engine-video-mute-btn');
+
     function updateState() {
+      // Play / Pause UI state
       if (video.paused) {
         container.classList.remove('is-playing');
         container.classList.add('is-paused');
@@ -373,31 +377,58 @@ document.addEventListener('DOMContentLoaded', () => {
         container.classList.add('is-playing');
         playBtn.setAttribute('aria-label', 'Pause video');
       }
+
+      // Audio Mute / Unmute UI state
+      if (video.muted) {
+        container.classList.remove('is-unmuted');
+        container.classList.add('is-muted');
+        if (muteBtn) muteBtn.setAttribute('aria-label', 'Unmute video');
+      } else {
+        container.classList.remove('is-muted');
+        container.classList.add('is-unmuted');
+        if (muteBtn) muteBtn.setAttribute('aria-label', 'Mute video');
+      }
     }
 
-    // Toggle playback function
+    // Toggle playback function with auto-unmute on user play click
     function togglePlay(e) {
       if (e) e.stopPropagation();
       if (video.paused) {
         video.dataset.userPaused = 'false';
+        // Auto-unmute when the user clicks play
+        video.muted = false;
         video.play().catch(err => console.warn('Video play prevented:', err));
       } else {
-        video.dataset.userPaused = 'true';
-        video.pause();
+        // If the video was playing muted from autoplay, clicking unmutes it
+        if (video.muted) {
+          video.muted = false;
+        } else {
+          video.dataset.userPaused = 'true';
+          video.pause();
+        }
       }
     }
 
     // Click on button or video container toggles playback
     playBtn.addEventListener('click', togglePlay);
     container.addEventListener('click', (e) => {
-      // Don't double trigger if clicked directly on button
-      if (e.target.closest('.engine-video-play-btn')) return;
+      // Don't trigger if clicked directly on play or mute button
+      if (e.target.closest('.engine-video-play-btn') || e.target.closest('.engine-video-mute-btn')) return;
       togglePlay(e);
     });
+
+    // Mute toggle button click
+    if (muteBtn) {
+      muteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+      });
+    }
 
     video.addEventListener('play', updateState);
     video.addEventListener('pause', updateState);
     video.addEventListener('ended', updateState);
+    video.addEventListener('volumechange', updateState);
 
     // Initial state check
     updateState();

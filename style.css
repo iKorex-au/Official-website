@@ -2926,6 +2926,70 @@ body.dark-theme .engine-card:hover {
   }
 }
 
+/* Sound / Mute Toggle Button */
+.engine-video-mute-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(11, 15, 25, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+  outline: none;
+}
+
+.engine-video-mute-btn:hover {
+  background: rgba(0, 136, 255, 0.85);
+  border-color: #00b4ff;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 180, 255, 0.4);
+}
+
+.engine-video-mute-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Mute/Unmute Icon Visibility States */
+.engine-card-media .unmute-icon {
+  display: none;
+}
+
+.engine-card-media .mute-icon {
+  display: block;
+}
+
+.engine-card-media.is-unmuted .engine-video-mute-btn {
+  border-color: rgba(0, 180, 255, 0.6);
+  color: #00b4ff;
+  background: rgba(11, 15, 25, 0.9);
+}
+
+.engine-card-media.is-unmuted .engine-video-mute-btn:hover {
+  color: #ffffff;
+  background: rgba(0, 136, 255, 0.85);
+}
+
+.engine-card-media.is-unmuted .unmute-icon {
+  display: block;
+}
+
+.engine-card-media.is-unmuted .mute-icon {
+  display: none;
+}
+
 .engine-card-body {
   display: flex;
   flex-direction: column;
