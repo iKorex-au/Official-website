@@ -2808,6 +2808,124 @@ body.dark-theme .engine-card:hover {
   }
 }
 
+/* Video Card interactive cursor */
+.engine-card-media.has-video {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Play/Pause Button Overlay */
+.engine-video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(11, 15, 25, 0.78);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 180, 255, 0.25);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+  padding: 0;
+  outline: none;
+}
+
+.engine-video-play-btn svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s ease;
+}
+
+/* Optical center alignment for play triangle */
+.engine-video-play-btn .play-icon {
+  margin-left: 3px;
+}
+
+.engine-video-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(0, 136, 255, 0.85);
+  border-color: #00b4ff;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45), 0 0 30px rgba(0, 180, 255, 0.6);
+  color: #ffffff;
+}
+
+.engine-video-play-btn:active {
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+/* Icon visibility states */
+.engine-card-media .pause-icon {
+  display: none;
+}
+
+.engine-card-media .play-icon {
+  display: block;
+}
+
+/* When playing: button fades out, reveals on hover or focus */
+.engine-card-media.is-playing .engine-video-play-btn {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.88);
+}
+
+.engine-card-media.is-playing:hover .engine-video-play-btn,
+.engine-card-media.is-playing:focus-within .engine-video-play-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.engine-card-media.is-playing .pause-icon {
+  display: block;
+}
+
+.engine-card-media.is-playing .play-icon {
+  display: none;
+}
+
+/* When paused: button is prominently displayed */
+.engine-card-media.is-paused .engine-video-play-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  animation: play-btn-pulse 2.5s infinite ease-in-out;
+}
+
+.engine-card-media.is-paused .pause-icon {
+  display: none;
+}
+
+.engine-card-media.is-paused .play-icon {
+  display: block;
+}
+
+.engine-card-media.is-paused .engine-media-overlay {
+  background: linear-gradient(180deg, rgba(11, 15, 25, 0.2) 0%, rgba(11, 15, 25, 0.55) 100%);
+}
+
+@keyframes play-btn-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 180, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 180, 255, 0.65);
+  }
+}
+
 .engine-card-body {
   display: flex;
   flex-direction: column;

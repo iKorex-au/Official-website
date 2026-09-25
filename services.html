@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iKOREX Automation Services | Functional Pillars</title>
-  <meta name="description" content="Empower your business with iKOREX's three core automation engines: RPA workflow re-engineering, AI camera retail security monitoring, and Chartered Accountant-grade financial reporting.">
-  
+  <meta name="description"
+    content="Empower your business with iKOREX's three core automation engines: RPA workflow re-engineering, AI camera retail security monitoring, and Chartered Accountant-grade financial reporting.">
+
   <!-- Inter Tight & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Global Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="antialiased">
   <script>
-    (function() {
+    (function () {
       try {
         const theme = localStorage.getItem('theme');
         if (theme === 'dark') {
           document.body.classList.add('dark-theme');
         }
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 
@@ -32,7 +37,7 @@
       <a href="index.html" class="logo">
         <img class="logo-img" src="logo.png" alt="iKOREX Logo">
       </a>
-      
+
       <!-- Nav Links -->
       <nav class="nav-links">
         <a href="index.html#hero">Home</a>
@@ -44,11 +49,12 @@
           <a href="contact.html" class="btn btn-primary btn-sm">Start Trial</a>
         </div>
       </nav>
-      
+
       <!-- Right CTA & Theme Toggle -->
       <div class="nav-cta">
         <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -59,13 +65,14 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
         <a href="contact.html" class="btn btn-primary btn-sm">Start Trial</a>
       </div>
-      
+
       <!-- Mobile menu trigger -->
       <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
@@ -81,56 +88,70 @@
   <section class="services-section" id="engines" style="padding: 140px 20px 80px 20px;">
     <!-- Grid pattern overlay -->
     <div class="grid-overlay"></div>
-    
+
     <div class="section-container" style="position: relative; z-index: 2;">
-      
+
       <!-- Clean Eyebrow Badge with proper inline SVG definitions -->
       <div style="text-align: center; margin-bottom: 24px;">
         <div class="custom-badge">
           <span class="badge-icon-wrapper">
             <svg viewBox="0 0 24 24" fill="none" class="badge-svg">
               <defs>
-                <linearGradient id="logo-icon-grad-top-service" x1="3" y1="3" x2="21" y2="12" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#00b4ff"/>
-                  <stop offset="100%" stop-color="#0088ff"/>
+                <linearGradient id="logo-icon-grad-top-service" x1="3" y1="3" x2="21" y2="12"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00b4ff" />
+                  <stop offset="100%" stop-color="#0088ff" />
                 </linearGradient>
-                <linearGradient id="logo-icon-grad-bottom-service" x1="3" y1="21" x2="21" y2="12" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#0055cc"/>
-                  <stop offset="100%" stop-color="#0088ff"/>
+                <linearGradient id="logo-icon-grad-bottom-service" x1="3" y1="21" x2="21" y2="12"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#0055cc" />
+                  <stop offset="100%" stop-color="#0088ff" />
                 </linearGradient>
               </defs>
-              <path d="M3 3 L21 12 L8 12 L3 9 Z" fill="url(#logo-icon-grad-top-service)"/>
-              <path d="M3 21 L21 12 L8 12 L3 15 Z" fill="url(#logo-icon-grad-bottom-service)"/>
+              <path d="M3 3 L21 12 L8 12 L3 9 Z" fill="url(#logo-icon-grad-top-service)" />
+              <path d="M3 21 L21 12 L8 12 L3 15 Z" fill="url(#logo-icon-grad-bottom-service)" />
             </svg>
           </span>
           <span class="badge-text">Functional Pillars</span>
         </div>
       </div>
-      
-      <h1 class="section-title" style="text-align: center; margin: 0 auto 20px auto; font-size: 3rem; line-height: 1.15; max-width: 900px;">
+
+      <h1 class="section-title"
+        style="text-align: center; margin: 0 auto 20px auto; font-size: 3rem; line-height: 1.15; max-width: 900px;">
         Three core engines.<br>Built for absolute operational precision.
       </h1>
-      <p class="section-subtitle" style="text-align: center; max-width: 680px; margin: 0 auto 64px auto; font-size: 1.125rem; line-height: 1.6;">
-        From modern software robots to real-time artificial vision models &mdash; we deploy high-performance operational systems.
+      <p class="section-subtitle"
+        style="text-align: center; max-width: 680px; margin: 0 auto 64px auto; font-size: 1.125rem; line-height: 1.6;">
+        From modern software robots to real-time artificial vision models &mdash; we deploy high-performance operational
+        systems.
       </p>
-      
+
       <div class="engines-grid">
         <!-- Engine Card 1 -->
         <div class="engine-card">
           <!-- Card Media: Video (with Poster & Fallback Image) -->
-          <div class="engine-card-media">
-            <video src="assets/images/hero_video.mp4" 
-                   poster="assets/images/services-rpa-workflow.jpg" 
-                   autoplay loop muted playsinline preload="metadata" 
-                   class="engine-media-element">
+          <div class="engine-card-media has-video is-playing">
+            <video src="assets/images/RPA Video.mp4" poster="assets/images/services-rpa-workflow.jpg" autoplay loop
+              muted playsinline preload="metadata" class="engine-media-element">
               <!-- Fallback image if video is not supported -->
-              <img src="assets/images/services-rpa-workflow.jpg" alt="RPA &amp; Workflow Re-engineering" class="engine-media-element">
+              <img src="assets/images/services-rpa-workflow.jpg" alt="RPA &amp; Workflow Re-engineering"
+                class="engine-media-element">
             </video>
             <div class="engine-media-overlay"></div>
             <div class="engine-media-badge">
               <span class="engine-badge-pulse"></span>
               <span>Workflow Bot</span>
             </div>
+            <!-- Play/Pause Control Button -->
+            <button class="engine-video-play-btn" type="button" aria-label="Toggle play/pause">
+              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+              <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1.5"></rect>
+                <rect x="14" y="4" width="4" height="16" rx="1.5"></rect>
+              </svg>
+            </button>
           </div>
 
           <div class="engine-card-body">
@@ -138,16 +159,19 @@
               <span class="engine-number">01</span>
               <div class="engine-icon-wrapper">
                 <!-- Lightning icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
               </div>
             </div>
             <h3 class="engine-card-title">RPA &amp; Workflow Re-engineering</h3>
-            <p class="engine-card-desc">We eliminate repetitive manual steps by wrapping software bots around your legacy apps, maximizing transaction flow speeds. We integrate operations audits directly into the automation layer to remove process waste before writing code.</p>
-            
+            <p class="engine-card-desc">We eliminate repetitive manual steps by wrapping software bots around your
+              legacy apps, maximizing transaction flow speeds. We integrate operations audits directly into the
+              automation layer to remove process waste before writing code.</p>
+
             <hr class="engine-divider">
-            
+
             <ul class="engine-features">
               <li>Cross-system data synchronization architecture</li>
               <li>UiPath &amp; Microsoft Power Automate deployment</li>
@@ -160,10 +184,8 @@
         <div class="engine-card">
           <!-- Card Media: Dedicated AI Computer Vision Image (Video-ready) -->
           <div class="engine-card-media">
-            <img src="assets/images/services-ai-security.jpg" 
-                 alt="AI Camera Security Monitoring" 
-                 class="engine-media-element" 
-                 loading="lazy">
+            <img src="assets/images/services-ai-security.jpg" alt="AI Camera Security Monitoring"
+              class="engine-media-element" loading="lazy">
             <div class="engine-media-overlay"></div>
             <div class="engine-media-badge">
               <span class="engine-badge-pulse"></span>
@@ -176,17 +198,20 @@
               <span class="engine-number">02</span>
               <div class="engine-icon-wrapper">
                 <!-- Clock icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
               </div>
             </div>
             <h3 class="engine-card-title">AI Camera Security Monitoring</h3>
-            <p class="engine-card-desc">Using state-of-the-art computer vision tech, we integrate with your current on-site camera networks to track behavior models, contextually isolating real-time concealment actions to shut down retail loss events fast.</p>
-            
+            <p class="engine-card-desc">Using state-of-the-art computer vision tech, we integrate with your current
+              on-site camera networks to track behavior models, contextually isolating real-time concealment actions to
+              shut down retail loss events fast.</p>
+
             <hr class="engine-divider">
-            
+
             <ul class="engine-features">
               <li>Advanced in-aisle gesture classification models</li>
               <li>Instant on-floor smart alerts with short proof clips</li>
@@ -199,10 +224,8 @@
         <div class="engine-card">
           <!-- Card Media: Dedicated Financial Intelligence Image (Video-ready) -->
           <div class="engine-card-media">
-            <img src="assets/images/services-financial-reporting.jpg" 
-                 alt="Accounting, Bookkeeping &amp; Financial Reporting" 
-                 class="engine-media-element" 
-                 loading="lazy">
+            <img src="assets/images/services-financial-reporting.jpg"
+              alt="Accounting, Bookkeeping &amp; Financial Reporting" class="engine-media-element" loading="lazy">
             <div class="engine-media-overlay"></div>
             <div class="engine-media-badge">
               <span class="engine-badge-pulse"></span>
@@ -215,7 +238,8 @@
               <span class="engine-number">03</span>
               <div class="engine-icon-wrapper">
                 <!-- Monitor icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                   <line x1="8" y1="21" x2="16" y2="21"></line>
                   <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -223,10 +247,12 @@
               </div>
             </div>
             <h3 class="engine-card-title">Accounting, Bookkeeping &amp; Financial Reporting</h3>
-            <p class="engine-card-desc">Reliable day-to-day bookkeeping combined with advanced financial reporting models. We maintain transaction files and translate raw financial streams into verified insight packages matching local Australian compliance standards.</p>
-            
+            <p class="engine-card-desc">Reliable day-to-day bookkeeping combined with advanced financial reporting
+              models. We maintain transaction files and translate raw financial streams into verified insight packages
+              matching local Australian compliance standards.</p>
+
             <hr class="engine-divider">
-            
+
             <ul class="engine-features">
               <li>Daily reconciliation, ledger audits, and tech setups (Xero, MYOB)</li>
               <li>Full AASB &amp; IFRS statement frameworks and compliance reporting</li>
@@ -245,7 +271,8 @@
         <div class="cta-glow"></div>
         <div class="cta-content">
           <h2 class="cta-title">Ready to Automate Your Operations?</h2>
-          <p class="cta-description">Let's build custom workflows that eliminate manual overhead, optimize accuracy, and save hours of work. Schedule a discovery call with our experts today.</p>
+          <p class="cta-description">Let's build custom workflows that eliminate manual overhead, optimize accuracy, and
+            save hours of work. Schedule a discovery call with our experts today.</p>
           <div class="cta-actions">
             <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
             <a href="solutions.html" class="btn btn-secondary">Explore Use Cases</a>
@@ -262,13 +289,21 @@
         <a href="index.html" class="logo">
           <img class="logo-img" src="logo.png" alt="iKOREX Logo">
         </a>
-        <p class="brand-desc">Enterprise-grade intelligent automation for modern businesses. Empowering teams, eliminating manual overhead, and optimizing output.</p>
+        <p class="brand-desc">Enterprise-grade intelligent automation for modern businesses. Empowering teams,
+          eliminating manual overhead, and optimizing output.</p>
         <div class="footer-socials">
-          <a href="https://www.linkedin.com/company/ikorex/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a href="https://www.linkedin.com/company/ikorex/" class="social-link" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
           </a>
           <div class="social-divider"></div>
-          <a href="https://x.com/ikorex_official" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <a href="https://x.com/ikorex_official" class="social-link" target="_blank" rel="noopener noreferrer"
+            aria-label="X">
             <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor">
               <path
                 d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z">
@@ -276,12 +311,22 @@
             </svg>
           </a>
           <div class="social-divider"></div>
-          <a href="https://www.facebook.com/profile.php?id=61592559665178" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          <a href="https://www.facebook.com/profile.php?id=61592559665178" class="social-link" target="_blank"
+            rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
           </a>
           <div class="social-divider"></div>
-          <a href="https://www.instagram.com/ikorex_automation/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          <a href="https://www.instagram.com/ikorex_automation/" class="social-link" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
           </a>
         </div>
       </div>
@@ -317,12 +362,16 @@
     </div>
     <div class="footer-bottom section-container">
       <p>Copyright &copy; 2026 iKOREX. iKOREX &ndash; Intelligent Process Automation.</p>
-      <p style="font-size: 0.8rem; opacity: 0.8; letter-spacing: 0.02em;">ABN: 88 676 493 628 &nbsp;|&nbsp; ACN: 676 493 628</p>
-      <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2px;">Designed and developed by <a href="https://www.ornabyte.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ornabyte</a></p>
+      <p style="font-size: 0.8rem; opacity: 0.8; letter-spacing: 0.02em;">ABN: 88 676 493 628 &nbsp;|&nbsp; ACN: 676 493
+        628</p>
+      <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2px;">Designed and developed by <a
+          href="https://www.ornabyte.com" target="_blank" rel="noopener noreferrer"
+          style="color: inherit; text-decoration: underline;">ornabyte</a></p>
     </div>
   </footer>
 
   <!-- Theme and Custom JavaScript -->
   <script src="main.js"></script>
 </body>
+
 </html>

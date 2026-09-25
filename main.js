@@ -335,20 +335,88 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-play / pause card videos based on viewport intersection
-  const cardVideos = document.querySelectorAll('.engine-card-media video');
-  if (cardVideos.length > 0 && 'IntersectionObserver' in window) {
-    const videoObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const video = entry.target;
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      });
-    }, { threshold: 0.25 });
+  // --- Service Card Video Play / Pause Controls ---
+  const mediaContainers = document.querySelectorAll('.engine-card-media');
 
-    cardVideos.forEach(v => videoObserver.observe(v));
-  }
+  mediaContainers.forEach(container => {
+    const video = container.querySelector('video');
+    if (!video) return;
+
+    container.classList.add('has-video');
+
+    // Find or create play/pause button
+    let playBtn = container.querySelector('.engine-video-play-btn');
+    if (!playBtn) {
+      playBtn = document.createElement('button');
+      playBtn.className = 'engine-video-play-btn';
+      playBtn.type = 'button';
+      playBtn.setAttribute('aria-label', 'Toggle video playback');
+      playBtn.innerHTML = `
+        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="6 3 20 12 6 21 6 3"></polygon>
+        </svg>
+        <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="6" y="4" width="4" height="16" rx="1.5"></rect>
+          <rect x="14" y="4" width="4" height="16" rx="1.5"></rect>
+        </svg>
+      `;
+      container.appendChild(playBtn);
+    }
+
+    function updateState() {
+      if (video.paused) {
+        container.classList.remove('is-playing');
+        container.classList.add('is-paused');
+        playBtn.setAttribute('aria-label', 'Play video');
+      } else {
+        container.classList.remove('is-paused');
+        container.classList.add('is-playing');
+        playBtn.setAttribute('aria-label', 'Pause video');
+      }
+    }
+
+    // Toggle playback function
+    function togglePlay(e) {
+      if (e) e.stopPropagation();
+      if (video.paused) {
+        video.dataset.userPaused = 'false';
+        video.play().catch(err => console.warn('Video play prevented:', err));
+      } else {
+        video.dataset.userPaused = 'true';
+        video.pause();
+      }
+    }
+
+    // Click on button or video container toggles playback
+    playBtn.addEventListener('click', togglePlay);
+    container.addEventListener('click', (e) => {
+      // Don't double trigger if clicked directly on button
+      if (e.target.closest('.engine-video-play-btn')) return;
+      togglePlay(e);
+    });
+
+    video.addEventListener('play', updateState);
+    video.addEventListener('pause', updateState);
+    video.addEventListener('ended', updateState);
+
+    // Initial state check
+    updateState();
+
+    // Auto-play / pause based on viewport intersection (respects manual user pause)
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (video.dataset.userPaused !== 'true') {
+              video.play().catch(() => {});
+            }
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.25 });
+
+      observer.observe(video);
+    }
+  });
 });
